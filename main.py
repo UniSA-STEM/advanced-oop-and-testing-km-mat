@@ -6,10 +6,12 @@ ID: 110336447
 Username: matky024
 This is my own work as defined by the University's Academic Integrity Policy.
 '''
+from sys import stdlib_module_names
 
 from animal import Animal, Mammal, Reptile, Bird, Aquatic
 from enclosure import Enclosure
-from staff import Staff
+from staff import Staff, Zookeper
+
 
 def main():
 
@@ -32,9 +34,20 @@ def main():
     print(fish.move())
 
     #create enclosures
-    savannah = Enclosure("Savannah 1", "Savannah", 200, ["Lion"]
+    savannah = Enclosure("Savannah 1", "Savannah", 200, ["Lion"])
     swamp = Enclosure("Swamp 1", "Swamp", 200, ["Snakes"])
     treetop = Enclosure("Treetop 1", "Treetop", 50, ["bird"])
     aquarium = Enclosure("Aquarium 1", "Aquarium", 20, ["Fish"])
 
-print(lion.make_sound())
+    savannah.add_animal(lion)
+    #add wrong specie to test
+    swamp.add_animal(lion)
+
+    swamp.add_animal(anaconda)
+    treetop.add_animal(parrot)
+    aquarium.add_animal(fish)
+
+    #create zookepers
+    keeper = Zookeper("Alice")
+
+    #enclosure status
