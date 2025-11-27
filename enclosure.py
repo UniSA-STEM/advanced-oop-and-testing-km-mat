@@ -8,7 +8,7 @@ This is my own work as defined by the University's Academic Integrity Policy.
 '''
 
 class Enclosure:
-    def __init__(self, name, env_type, size, cleanliness, allowed_species):
+    def __init__(self, name, env_type, size, allowed_species):
         self._name = name
         self._env_type = env_type
         self._propertysize = size
