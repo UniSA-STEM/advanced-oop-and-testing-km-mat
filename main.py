@@ -48,8 +48,6 @@ def main():
     print(fish.move())
 
 
-
-
     #create zookepers
     keeper = Zookeper("Alice")
 
@@ -57,6 +55,18 @@ def main():
     print(keeper.feed_animal(parrot, treetop))
     print(keeper.feed_animal(anaconda, swamp))
     print(keeper.feed_animal(fish, aquarium))
+
+    #enclosure status
+    print(savannah.status)
+    print(swamp.status)
+    print(treetop.status)
+    print(aquarium.status)
+
+    #clean enclosure test
+    print(keeper.clean_enclosure(savannah))
+    print(keeper.clean_enclosure(treetop))
+    print(keeper.clean_enclosure(aquarium))
+    print(keeper.clean_enclosure(swamp))
 
     #enclosure status
     print(savannah.status)
