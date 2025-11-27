@@ -23,6 +23,7 @@ class Animal(ABC):
     @abstractmethod
     def move(self):
         pass
+
     def eat(self):
         return f"{self._species} eats {self._diet}."
 
