@@ -7,7 +7,7 @@ Username: matky024
 This is my own work as defined by the University's Academic Integrity Policy.
 '''
 
-class enclosure:
+class Enclosure:
     def __init__(self, name, env_type, size, cleanliness, allowed_species):
         self._name = name
         self._env_type = env_type
@@ -27,6 +27,7 @@ class enclosure:
 
     def clean(self):
         self._cleanliness = 100
+        return f"{self._name} has been cleaned"
 
     @property
     def status(self):
