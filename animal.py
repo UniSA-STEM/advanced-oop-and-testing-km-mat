@@ -1,6 +1,6 @@
 '''
 File: animal.py
-Description: A brief description of this Python module.
+Description: Animal specific methods and records.
 Author: Karl Matillano
 ID: 110336447 
 Username: matky024

@@ -1,6 +1,7 @@
 '''
 File: enclosure.py
-Description: A brief description of this Python module.
+Description: Enclosure specific methods and records.
+Author: Karl Matillano.
 Author: Karl Matillano
 ID: 110336447 
 Username: matky024

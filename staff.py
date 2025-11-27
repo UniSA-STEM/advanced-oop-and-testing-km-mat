@@ -1,6 +1,6 @@
 '''
-File: filename.py
-Description: A brief description of this Python module.
+File: staff.py
+Description: Staff Class and what it does.
 Author: Karl Matillano
 ID: 110336447 
 Username: matky024
