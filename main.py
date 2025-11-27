@@ -19,15 +19,17 @@ def main():
     parrot = Bird("Zazu","Parrot",1, "seeds")
     anaconda = Reptile("Voldmort","Snake",100,"Harry Potter")
     fish = Aquatic("Nemo", "Fish",1, "dory")
+    liger = Mammal("Tony the liger","Liger",5, "raw meat")
 
     #create enclosures
-    savannah = Enclosure("Savannah 1", "Savannah", 200, ["Lion"])
+    savannah = Enclosure("Savannah 1", "Savannah", 200, ["Lion", "Liger"])
     swamp = Enclosure("Swamp 1", "Swamp", 200, ["Snake"])
     treetop = Enclosure("Treetop 1", "Treetop", 50, ["Parrot"])
     aquarium = Enclosure("Aquarium 1", "Aquarium", 20, ["Fish"])
 
 
     savannah.add_animal(lion)
+    savannah.add_animal(liger)
     #add wrong specie to test
     swamp.add_animal(lion)
 
@@ -37,6 +39,8 @@ def main():
 
     print(lion.make_sound())
     print(lion.move())
+    print(liger.make_sound())
+    print(liger.move())
 
     print(parrot.make_sound())
     print(parrot.move())
@@ -52,6 +56,7 @@ def main():
     keeper = Zookeper("Alice")
 
     print(keeper.feed_animal(lion,savannah))
+    print(keeper.feed_animal(liger,savannah))
     print(keeper.feed_animal(parrot, treetop))
     print(keeper.feed_animal(anaconda, swamp))
     print(keeper.feed_animal(fish, aquarium))
