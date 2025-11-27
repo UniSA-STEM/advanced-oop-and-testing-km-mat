@@ -6,7 +6,7 @@ ID: 110336447
 Username: matky024
 This is my own work as defined by the University's Academic Integrity Policy.
 '''
-from sys import stdlib_module_names
+
 
 from animal import Animal, Mammal, Reptile, Bird, Aquatic
 from enclosure import Enclosure
@@ -79,6 +79,14 @@ def main():
     print(treetop.status)
     print(aquarium.status)
 
+    #healthcheck
+    keeper.health_check(liger, "No issues", "not applicable", "simply horny")
+    keeper.health_check(liger, "Catcalling", "severe", "very horny")
+    print(liger.health_report())
 
+    #remove animal
+    print(savannah.remove_animal(liger))
+
+    print(savannah.status)
 if __name__ == '__main__':
     main()

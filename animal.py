@@ -16,7 +16,6 @@ class Animal:
         self._species = species
         self._diet = diet
         self._health_record = []
-        self._behavioral_concerns = []
 
     #animal actions
     def make_sound(self):
@@ -38,6 +37,17 @@ class Animal:
         record = HealthRecord(issue, severity, behavioral_concerns)
         self._health_record.append(record)
         return f"health record updated"
+
+    def health_report(self):
+        if not self._health_record:
+            return f"No health records available."
+        report = f"Health report for {self._name}:\n"
+        for a in self._health_record:
+            report += f"- {a}\n"
+        return report
+
+    def __str__(self):
+        return f"{self._name, self._species, self._age, self._diet, self._health_record, self._behavioral_concerns }."
 
 class Bird(Animal):
     def make_sound(self):

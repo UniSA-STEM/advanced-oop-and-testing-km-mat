@@ -26,6 +26,7 @@ class Enclosure:
     def remove_animal(self, animal):
         if animal in self._animal:
             self._animal.remove(animal)
+            return f"The {animal._name} is removed from {self._name}!"
 
     def clean(self):
         self._cleanliness = 100
