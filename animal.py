@@ -14,6 +14,7 @@ class Animal:
         self._species = species
         self._diet = diet
 
+    #animal actions
     def make_sound(self):
         return f"{self._species} makes a sound."
 
@@ -23,6 +24,9 @@ class Animal:
     def sleep(self):
         return f"{self._species} sleeps."
 
+    def move(self):
+        return f"{self._name} moves."
+
     def info(self):
         return f"{self._name} is a {self._species}, aged {self._age} and eats {self._diet}."
 
@@ -30,10 +34,24 @@ class Bird(Animal):
     def make_sound(self):
         return f"{self._name} chirps."
 
+    def move(self):
+        return f"{self._name} flies around"
+
 class Mammal(Animal):
     def make_sound(self):
-        return f"{self._name roars}"
+        return f"{self._name} roars"
 
-class reptile(Animal):
+    def move(self):
+        return f"{self._name} paces around."
+
+class Reptile(Animal):
     def make_sound(self):
-        return f"{self._name hisses}"
+        return f"{self._name} hisses"
+    def move(self):
+        return f"{self._name} slithers."
+
+class Aquatic(Animal):
+    def make_sound(self):
+        return f"{self._name} bubbles"
+    def move(self):
+        return f"{self._name} swims."
