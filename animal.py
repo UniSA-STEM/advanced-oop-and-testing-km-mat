@@ -47,7 +47,7 @@ class Animal(ABC):
         return report
 
     def __str__(self):
-        return f"{self._name, self._species, self._age, self._diet, self._health_record, self._behavioral_concerns }."
+        return f"{self._name, self._species, self._age, self._diet, self._health_record}."
 
 class Bird(Animal):
     def make_sound(self):
@@ -59,7 +59,6 @@ class Bird(Animal):
 class Mammal(Animal):
     def make_sound(self):
         return f"{self._name} roars"
-
     def move(self):
         return f"{self._name} paces around."
 
