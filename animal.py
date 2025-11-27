@@ -6,6 +6,8 @@ ID: 110336447
 Username: matky024
 This is my own work as defined by the University's Academic Integrity Policy.
 '''
+from enclosure import Enclosure
+
 
 class Animal:
     def __init__(self, name, species, age, diet):
