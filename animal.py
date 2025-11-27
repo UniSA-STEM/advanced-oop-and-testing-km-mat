@@ -15,6 +15,8 @@ class Animal:
         self._age = age
         self._species = species
         self._diet = diet
+        self._health_record = []
+        self._behavioral_concerns = []
 
     #animal actions
     def make_sound(self):
@@ -31,6 +33,11 @@ class Animal:
 
     def info(self):
         return f"{self._name} is a {self._species}, aged {self._age} and eats {self._diet}."
+
+    def add_health_record(self, issue, severity, behavioral_concerns):
+        record = HealthRecord(issue, severity, behavioral_concerns)
+        self._health_record.append(record)
+        return f"health record updated"
 
 class Bird(Animal):
     def make_sound(self):
@@ -57,3 +64,12 @@ class Aquatic(Animal):
         return f"{self._name} bubbles"
     def move(self):
         return f"{self._name} swims."
+
+class HealthRecord:
+    def __init__(self, issue, severity, behavioral_concerns):
+        self._issue = issue
+        self._severity = severity
+        self._behavioral_concerns = behavioral_concerns
+
+    def __str__(self):
+        return f"Has {self._issue} that is {self._severity}. Behaviour is {self._behavioral_concerns}."
