@@ -6,8 +6,6 @@ ID: 110336447
 Username: matky024
 This is my own work as defined by the University's Academic Integrity Policy.
 '''
-from enclosure import Enclosure
-
 
 class Staff:
     def __init__(self, name):
@@ -24,5 +22,6 @@ class Zookeper(Staff):
     def clean_enclosure(self, enclosure):
         return f"{self._name} cleans {enclosure._name}. {enclosure.clean()}"
 
-    def health_check(self, animal):
+    def health_check(self, animal, issue, severity, behavioral_concerns):
+        animal.add_health_record(issue, severity, behavioral_concerns)
         return f"{self._name} performs healthcheck on {animal._name}."
