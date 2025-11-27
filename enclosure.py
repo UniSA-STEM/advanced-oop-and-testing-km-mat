@@ -36,5 +36,6 @@ class Enclosure:
             "environment": self._env_type,
             "property size": self._propertysize,
             "allowed species": self._allowed_species,
-            "animals": [a._name for a in self._animal]
-            "cleanliness": self._cleanliness
+            "animals": [a._name for a in self._animal],
+            "cleanliness": self._cleanliness,
+        }
