@@ -20,6 +20,21 @@ def main():
     anaconda = Reptile("Voldmort","Snake",100,"Harry Potter")
     fish = Aquatic("Nemo", "Fish",1, "dory")
 
+    #create enclosures
+    savannah = Enclosure("Savannah 1", "Savannah", 200, ["Lion"])
+    swamp = Enclosure("Swamp 1", "Swamp", 200, ["Snake"])
+    treetop = Enclosure("Treetop 1", "Treetop", 50, ["Parrot"])
+    aquarium = Enclosure("Aquarium 1", "Aquarium", 20, ["Fish"])
+
+
+    savannah.add_animal(lion)
+    #add wrong specie to test
+    swamp.add_animal(lion)
+
+    swamp.add_animal(anaconda)
+    treetop.add_animal(parrot)
+    aquarium.add_animal(fish)
+
     print(lion.make_sound())
     print(lion.move())
 
@@ -32,19 +47,16 @@ def main():
     print(fish.make_sound())
     print(fish.move())
 
-    #create enclosures
-    savannah = Enclosure("Savannah 1", "Savannah", 200, ["Lion"])
-    swamp = Enclosure("Swamp 1", "Swamp", 200, ["Snake"])
-    treetop = Enclosure("Treetop 1", "Treetop", 50, ["Parrot"])
-    aquarium = Enclosure("Aquarium 1", "Aquarium", 20, ["Fish"])
 
-    savannah.add_animal(lion)
-    #add wrong specie to test
-    swamp.add_animal(lion)
 
-    swamp.add_animal(anaconda)
-    treetop.add_animal(parrot)
-    aquarium.add_animal(fish)
+
+    #create zookepers
+    keeper = Zookeper("Alice")
+
+    print(keeper.feed_animal(lion,savannah))
+    print(keeper.feed_animal(parrot, treetop))
+    print(keeper.feed_animal(anaconda, swamp))
+    print(keeper.feed_animal(fish, aquarium))
 
     #enclosure status
     print(savannah.status)
@@ -52,13 +64,6 @@ def main():
     print(treetop.status)
     print(aquarium.status)
 
-    #create zookepers
-    keeper = Zookeper("Alice")
-
-    print(keeper.feed_animal(lion))
-    print(keeper.feed_animal(parrot))
-    print(keeper.feed_animal(anaconda))
-    print(keeper.feed_animal(fish))
 
 if __name__ == '__main__':
     main()

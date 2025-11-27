@@ -32,7 +32,7 @@ class Enclosure:
         return f"{self._name} has been cleaned"
 
     def dirtify(self, dirt):
-        self._cleanlines = self._cleanlines - dirt
+        self._cleanliness = self._cleanliness - dirt
 
     @property
     def status(self):
