@@ -14,6 +14,18 @@ class Animal:
         self._species = species
         self._diet = diet
 
+    def make_sound(self):
+        return f"{self._species} makes a sound."
+
+    def eat(self):
+        return f"{self._species} eats {self._diet}."
+
+    def sleep(self):
+        return f"{self._species} sleeps."
+
+    def info(self):
+        return f"{self._name} is a {self._species}, aged {self._age} and eats {self._diet}."
+
 class Bird(Animal):
     def make_sound(self):
         return f"{self._name} chirps."
