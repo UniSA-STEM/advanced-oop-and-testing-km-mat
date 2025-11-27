@@ -35,7 +35,7 @@ def main():
 
     #create enclosures
     savannah = Enclosure("Savannah 1", "Savannah", 200, ["Lion"])
-    swamp = Enclosure("Swamp 1", "Swamp", 200, ["Snakes"])
+    swamp = Enclosure("Swamp 1", "Swamp", 200, ["Snake"])
     treetop = Enclosure("Treetop 1", "Treetop", 50, ["Parrot"])
     aquarium = Enclosure("Aquarium 1", "Aquarium", 20, ["Fish"])
 
