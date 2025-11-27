@@ -36,7 +36,7 @@ def main():
     #create enclosures
     savannah = Enclosure("Savannah 1", "Savannah", 200, ["Lion"])
     swamp = Enclosure("Swamp 1", "Swamp", 200, ["Snakes"])
-    treetop = Enclosure("Treetop 1", "Treetop", 50, ["bird"])
+    treetop = Enclosure("Treetop 1", "Treetop", 50, ["Parrot"])
     aquarium = Enclosure("Aquarium 1", "Aquarium", 20, ["Fish"])
 
     savannah.add_animal(lion)
@@ -51,3 +51,6 @@ def main():
     keeper = Zookeper("Alice")
 
     #enclosure status
+
+if __name__ == '__main__':
+    main()

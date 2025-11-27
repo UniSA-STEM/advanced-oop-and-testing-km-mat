@@ -18,8 +18,9 @@ class Enclosure:
 
     def add_animal(self, animal):
         if animal._species not in self._allowed_species:
-            print(f"The {animal} is not allowed due to specie limitations   .")
-            self._animal.append(animal)
+            print(f"The {animal._name} is not allowed in {self._name} due to specie limitations   .")
+        self._animal.append(animal)
+        print(f"The {animal._name} is added to {self._name}!")
 
     def remove_animal(self, animal):
         if animal in self._animal:
