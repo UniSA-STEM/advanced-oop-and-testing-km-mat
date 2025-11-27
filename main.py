@@ -12,7 +12,6 @@ from animal import Animal, Mammal, Reptile, Bird, Aquatic
 from enclosure import Enclosure
 from staff import Staff, Zookeper
 
-
 def main():
 
     #create animals
@@ -47,10 +46,19 @@ def main():
     treetop.add_animal(parrot)
     aquarium.add_animal(fish)
 
+    #enclosure status
+    print(savannah.status)
+    print(swamp.status)
+    print(treetop.status)
+    print(aquarium.status)
+
     #create zookepers
     keeper = Zookeper("Alice")
 
-    #enclosure status
+    print(keeper.feed_animal(lion))
+    print(keeper.feed_animal(parrot))
+    print(keeper.feed_animal(anaconda))
+    print(keeper.feed_animal(fish))
 
 if __name__ == '__main__':
     main()
